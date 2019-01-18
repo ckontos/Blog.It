@@ -16,7 +16,7 @@ export const editEntry = (id, updates) => ({
     updates
 });
 
-export const removeEntry = (id) => ({
+export const removeEntry = ({ id } = {}) => ({
     type: 'REMOVE_ENTRY',
     id
 });

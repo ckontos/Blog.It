@@ -2,23 +2,23 @@
 // ENTRIES REDUCER
 //
 
-const entriesReducerDefualt = [];
+const entriesReducerDefault = [];
 
-export default (state = entriesReducerDefualt, action) => {
+export default (state = entriesReducerDefault, action) => {
     switch (action.type) {
         case 'ADD_ENTRY':
             return [...state, action.entry];
         case 'REMOVE_ENTRY':
-            return state.filter((id) => id !== action.id); 
+            return state.filter(({ id }) => id !== action.id); 
         case 'EDIT_ENTRY':
             return state.map((entry) => {
                 if (entry.id === action.id) {
                     return {
                         ...entry,
-                        ...updates
+                        ...action.updates
                     };
                 } else {
-                    return expense;
+                    return entry;
                 }
             });
         case 'SET_ENTRIES':

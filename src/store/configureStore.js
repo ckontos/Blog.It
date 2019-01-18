@@ -13,6 +13,7 @@ export default () => {
         }),
         composeEnhancers(applyMiddleware(thunk))
     );
+    console.log(store.getState());
     return store;   
 };
 
