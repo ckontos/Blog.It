@@ -1,5 +1,12 @@
 .content-container {
     margin: 0 auto;
-    padding: 0 $m-size;
-    max-width: 100rem;
+    padding: $xl-size $xxl-size;
+    max-width: 120rem;
+    background: $off-white;
+}
+
+.inner-content-container {
+    margin: 0 auto;
+    max-width: 110rem;
+    background: $off-white;
 }

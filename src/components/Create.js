@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import EntryForm from './EntryForm';
-import { addEntry } from '../actions/entries';
+import { startAddEntry } from '../actions/entries';
 
 export class Create extends React.Component {
 
@@ -21,7 +21,7 @@ export class Create extends React.Component {
 }
 
 const mapDispatchToProps = (dispatch) => ({
-    onSubmit: (entry) => dispatch(addEntry(entry))
+    onSubmit: (entry) => dispatch(startAddEntry(entry))
 });
 
 export default connect(undefined, mapDispatchToProps)(Create);

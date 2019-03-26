@@ -17,3 +17,15 @@
 .button--link {
     background: none;
 }
+
+.roundButton{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background: black;
+    color: white;
+  }
+
+  .roundButton--icon{
+    vertical-align: middle;
+  }

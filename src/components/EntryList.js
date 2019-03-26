@@ -1,10 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import EntryListItem from './EntryListItem';
-import setEntries from '../actions/entries';
+import selectExpenses from '../selectors/entries';
 
 export const EntryList = (props) => (
-    <div className='content-container'>
+    <div className='inner-content-container'>
         
         <div className='list-body'>
             {
@@ -14,7 +14,7 @@ export const EntryList = (props) => (
                     </div>
                 ) : (
                     props.entries.map((entry) => {
-                    return <EntryListItem key= {entry.id} {...entry} />;
+                    return <EntryListItem key= {entry.title} {...entry} />;
                     })
                 )
             }
@@ -24,7 +24,7 @@ export const EntryList = (props) => (
 
 const mapStateToProps = (state) => {
     return {
-        entries: setEntries(state.entries)
+        entries: selectExpenses(state.entries, state.filters)
     };
 };
 

@@ -16,24 +16,59 @@
 
 .list-item {
     align-items: center;
+    background: white;
     border: 1px solid darken($off-white, 7%);
     border-top: none;
     color: $dark-grey;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: $m-size;
+    margin-bottom: $m-size;
+    padding: $m-size 0 $m-size $m-size ;
     text-decoration: none;
-    transition: background .3s ease;
-    &:hover {
-        background: $off-white;
-    }
-    
+
     @media (max-width: $desktop-breakpoint) {
         align-items: right;
         display: flex;
         flex-direction: column;
         padding: $s-size;
+    }
+}
+
+.list-item__content {
+    @media (max-width: $desktop-breakpoint) {
+        padding-bottom: $m-size;
+    }
+}
+
+.list-item__actions {
+    @media (max-width: $desktop-breakpoint) {
+        padding-top: $m-size;
+        min-width: 100%;
+        border-top: 1px solid darken($off-white, 7%);
+        display: flex;
+        justify-content: space-evenly;
+    }
+}
+
+.list-item--action {
+    text-decoration: none;
+    border: 1px solid darken($off-white, 7%);
+    padding: 39.5px $m-size;
+    border-top: none;
+    border-right: none;
+    color: darken($off-white, 50%);
+    transition: background .3s ease;
+    &:hover {
+        background: darken($off-white, 5%);
+    }
+    @media (max-width: $desktop-breakpoint) {
+        border: none;
+        padding: 0;
+        transition: none;
+        &:hover {
+        background: none;
+    }
     }
 }
 

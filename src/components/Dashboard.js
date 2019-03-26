@@ -1,13 +1,15 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { EntryList } from './EntryList';
+import EntryList from './EntryList';
+import EntryListFilters from './EntryFilters';
 
 const DashboardPage = () => (
     
   <div>
     <h1>Dashboard page content</h1>
-    <Link to='/create'><button>Add Post</button></Link>
-    {/* <EntryList /> */}
+    <div className='content-container'>
+      <EntryListFilters />
+      <EntryList />
+    </div>
   </div>  
 );
 
